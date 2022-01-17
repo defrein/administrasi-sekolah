@@ -1,10 +1,9 @@
 {
     "config": {
+        "optimize-autoloader": true,
+        "prepend-autoloader": false,
         "platform": {
             "php": "8.0.9"
         }
-    },
-    "require": {
-        "mpdf/mpdf": "^6.1"
     }
 }

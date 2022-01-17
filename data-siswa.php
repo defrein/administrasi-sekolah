@@ -48,7 +48,8 @@ $user_type = $_SESSION['user_type'] == 'Super Admin';
     <section id="data-siswa" class="container">
         <div class="top-data">
             <h1>Data Siswa</h1>
-            <button type="button" class="btn btn-primary"><a href="tambah-siswa.php" style="color: #fff; text-decoration:none;"> + Tambah Data</a></button>
+            <button type="button" class="btn btn-primary"><a href="tambah-siswa.php" style="color: #fff; text-decoration:none; "> + Tambah Data</a></button>
+            <button type="button" class="btn btn-secondary" style="margin-right:20px;"><a href="cetak-siswa.php" style="color: #fff; text-decoration:none; "> Cetak Data</a></button>
         </div>
         <div class="list-siswa">
             <table class="table table-hover">

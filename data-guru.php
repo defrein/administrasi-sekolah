@@ -49,9 +49,11 @@ $user_type = $_SESSION['user_type'] == 'Super Admin';
         <div class="top-data">
             <h1>Data Guru</h1>
             <button type="button" class="btn btn-primary"><a href="tambah-guru.php" style="color: #fff; text-decoration:none;"> + Tambah Data</a></button>
+            <button type="button" class="btn btn-secondary" style="margin-right:20px;"><a href="cetak-guru.php" style="color: #fff; text-decoration:none; "> Cetak Data</a></button>
+
         </div>
         <div class="list-guru">
-            <table class="table table-hover">
+            <table class="table table-hover table-sm">
                 <thead>
                     <tr>
                         <th scope="col">No.</th>
