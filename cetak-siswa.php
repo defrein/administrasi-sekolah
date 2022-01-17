@@ -73,7 +73,8 @@ $user_type = $_SESSION['user_type'] == 'Super Admin';
                         <th scope="col">Nama</th>
                         <th scope="col">Jenis Kelamin</th>
                         <th scope="col">Alamat</th>
-                        <th scope="col">Kode Kelas</th>
+                        <th scope="col">Kelas</th>
+                        <th scope="col">Jurusan</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -86,7 +87,8 @@ $user_type = $_SESSION['user_type'] == 'Super Admin';
                         <td><?= $row["nama"]; ?></td>
                         <td><?= $row["jns_kelamin"]; ?></td>
                         <td><?= $row["alamat"]; ?></td>
-                        <td><?= $row["kd_kelas"]; ?></td>
+                        <td><?= $row["tingkat"]; ?></td>
+                        <td><?= $row["jurusan"]; ?></td>
                     </tr>
                     <?php $i++; ?>
 	                <?php endforeach; ?>

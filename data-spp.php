@@ -77,6 +77,7 @@ $user_type = $_SESSION['user_type'] == 'Super Admin';
                         <td class="button-action">
                         <a href="ubah-spp.php?no_kuitansi=<?= $row["no_kuitansi"]; ?>" ><button type="button" class="btn btn-warning">Edit</button></a>
                         <a href="hapus-spp.php?no_kuitansi=<?= $row["no_kuitansi"]; ?>" ><button type="button" class="btn btn-danger">Delete</button></a>
+                        <a href="cetak-spp.php?no_kuitansi=<?= $row["no_kuitansi"]; ?>" ><i class="fa fa-print fa-lg" aria-hidden="true" style="color: #000; padding:5px 10px"></i></a>
                         </td>
                     </tr>
                     <?php $i++; ?>

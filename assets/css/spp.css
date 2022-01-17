@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+    font-size: 18px;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+header {
+    padding: 20px 0 0 0;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#detail-spp {
+    padding: 20px;
+}
+
+table tr td {
+    padding: 5px 10px;
+}
+
+.right {
+    float: right;
+}
+
+.petugas {
+    padding: 100px 10px 20px 0;
+    width: 200px;
+    text-align: center;
+}
+
+.petugas-ket {
+    margin-bottom: 50px;
+}
+
+.petugas p {
+    padding: 5px;
+}
+
+.buttons {
+    position: absolute;
+    top: 90%;
+    left: 80%;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+}
+
+button a {
+    color: #fff;
+}
+
+.batal {
+    background: #dc3545;
+}
+
+.cetak {
+    background: #6c757d;
+    cursor: pointer;
+}
