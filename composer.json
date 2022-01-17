@@ -1,0 +1,10 @@
+{
+    "config": {
+        "platform": {
+            "php": "8.0.9"
+        }
+    },
+    "require": {
+        "mpdf/mpdf": "^6.1"
+    }
+}
