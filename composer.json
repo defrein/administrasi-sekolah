@@ -1,9 +1,0 @@
-{
-    "config": {
-        "optimize-autoloader": true,
-        "prepend-autoloader": false,
-        "platform": {
-            "php": "8.0.9"
-        }
-    }
-}
