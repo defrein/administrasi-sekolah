@@ -6,14 +6,18 @@ if (!isset($_SESSION["login"])) {
     exit;
 }
 
+$kd_kelas = '';
+$tampil_tingkat = array();
+$tampil_jurusan = array();
 
 require 'functions.php';
-$siswa = query("SELECT * FROM siswa, kelas where kelas.kd_kelas=siswa.kd_kelas");
-$kd_kelas = '';
+$jadwal = query("SELECT * FROM jadwal_pelajaran, mapel, kelas, guru where mapel.kd_mapel=jadwal_pelajaran.kd_mapel and kelas.kd_kelas=jadwal_pelajaran.kd_kelas and guru.nip=jadwal_pelajaran.nip");
 if (isset($_POST["refresh"])) {
     $kd_kelas = $_POST["kd_kelas"];
 
-    $siswa = query("SELECT * FROM siswa, kelas where kelas.kd_kelas=siswa.kd_kelas and siswa.kd_kelas = '$kd_kelas'");
+    $jadwal = query("SELECT * FROM jadwal_pelajaran, mapel, kelas, guru where mapel.kd_mapel=jadwal_pelajaran.kd_mapel and kelas.kd_kelas=jadwal_pelajaran.kd_kelas and guru.nip=jadwal_pelajaran.nip and kelas.kd_kelas = '$kd_kelas'");
+    $tampil_tingkat = query("SELECT tingkat FROM kelas where  kelas.kd_kelas = '$kd_kelas'");
+    $tampil_jurusan = query("SELECT jurusan FROM kelas where  kelas.kd_kelas = '$kd_kelas'");
 }
 
 
@@ -27,7 +31,7 @@ $user_type = $_SESSION['user_type'] == 'Super Admin';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cetak Data Siswa</title>
+    <title>Cetak Jadwal Kelas</title>
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/print.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -37,7 +41,7 @@ $user_type = $_SESSION['user_type'] == 'Super Admin';
 <body>
     <section id="data-siswa" class="container">
         <div class="top-data">
-            <h1><span class="hide-on-print">Cetak</span> Data Siswa</h1>
+            <h1><span class="hide-on-print">Cetak</span> Jadwal Pelajaran </h1>
             <div class="pilihkelas hide-on-print" style="width: 60%; float:right;">
                 <form action="" method="post">
                     <div class="form-group row">
@@ -66,7 +70,7 @@ $user_type = $_SESSION['user_type'] == 'Super Admin';
                         </div>
                         <div class="buttons">
                             <button type="button" class="btn btn-danger" style="margin-right:10px;"><a
-                                    href="data-siswa.php" style="color: #fff; text-decoration:none; ">
+                                    href="data-jadwal.php" style="color: #fff; text-decoration:none; ">
                                     Batal</a></button>
                             <button id="print" onclick="printTable()" class="btn btn-secondary"
                                 style="margin-right: 10px;">Cetak</button>
@@ -77,34 +81,53 @@ $user_type = $_SESSION['user_type'] == 'Super Admin';
                 </form>
             </div>
         </div>
+        <div class="tampil_kelas" style="clear:both">
+            <h5 style="margin-left: 10px;">
+                <?php
+                echo " ";
+                foreach ($tampil_tingkat as $tingkat) {
+                    foreach ($tingkat as $key => $val) {
+                        echo "Kelas $val ";
+                    }
+                }
+                foreach ($tampil_jurusan as $jurusan) {
+                    foreach ($jurusan as $key => $val) {
+                        echo "$val";
+                    }
+                }
+                ?></h5>
+        </div>
         <div class="list-siswa" id="printIndentTable">
             <table class="table table-bordered">
-                <thead class="thead-light">
+                <thead>
                     <tr>
                         <th scope="col">No.</th>
-                        <th scope="col">NIS</th>
-                        <th scope="col">Nama</th>
-                        <th scope="col">Jenis Kelamin</th>
-                        <th scope="col">Alamat</th>
-                        <th scope="col">Kelas</th>
+                        <th scope="col">Hari</th>
+                        <th scope="col">Waktu</th>
+                        <th scope="col">Mata Pelajaran</th>
+                        <th scope="col">Jumlah Jam</th>
                         <th scope="col">Jurusan</th>
+                        <th scope="col">Tingkat</th>
+                        <th scope="col">Pengajar</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php $i = 1; ?>
-                    <?php foreach ($siswa as $row) : ?>
+                    <?php foreach ($jadwal as $row) : ?>
 
                     <tr>
-                        <td><?= $i; ?></td>
-                        <td><?= $row["nis"]; ?></td>
-                        <td><?= $row["nama"]; ?></td>
-                        <td><?= $row["jns_kelamin"]; ?></td>
-                        <td><?= $row["alamat"]; ?></td>
-                        <td><?= $row["tingkat"]; ?></td>
+                        <td scope="row"><?= $i; ?></td>
+                        <td><?= $row["hari"]; ?></td>
+                        <td><?= $row["waktu"]; ?></td>
+                        <td><?= $row["nama_mapel"]; ?></td>
+                        <td><?= $row["jmlh_jam"]; ?></td>
                         <td><?= $row["jurusan"]; ?></td>
+                        <td><?= $row["tingkat"]; ?></td>
+                        <td><?= $row["nama"]; ?></td>
                     </tr>
                     <?php $i++; ?>
                     <?php endforeach; ?>
+
                 </tbody>
             </table>
         </div>
