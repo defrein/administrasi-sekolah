@@ -1,0 +1,7 @@
+super admin
+username: adminhero
+password: 123
+
+admin
+username: admin
+password: 123
