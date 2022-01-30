@@ -2,7 +2,4 @@
     .hide-on-print {
         display: none;
     }
-    table thead {
-        background: #e9ecef;
-    }
 }

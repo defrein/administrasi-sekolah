@@ -64,8 +64,8 @@ $user_type = $_SESSION['user_type'] == 'Super Admin';
                         <th scope="col">Kode Jadwal</th>
                         <th scope="col">Hari</th>
                         <th scope="col">Waktu</th>
-                        <th scope="col">Kode Mapel</th>
-                        <th scope="col">NIP Pengajar</th>
+                        <th scope="col">Mata Pelajaran</th>
+                        <th scope="col">Pengajar</th>
                         <th scope="col">Kode Kelas</th>
                         <th scope="col">Jumlah Jam</th>
                         <th scope="col">Aksi</th>
@@ -80,8 +80,8 @@ $user_type = $_SESSION['user_type'] == 'Super Admin';
                         <td scope="row"><?= $row["kd_jadwal"]; ?></td>
                         <td><?= $row["hari"]; ?></td>
                         <td><?= $row["waktu"]; ?></td>
-                        <td><?= $row["kd_mapel"]; ?></td>
-                        <td><?= $row["nip"]; ?></td>
+                        <td><?= $row["nama_mapel"]; ?></td>
+                        <td><?= $row["nama"]; ?></td>
                         <td><?= $row["kd_kelas"]; ?></td>
                         <td><?= $row["jmlh_jam"]; ?></td>
                         <td class="button-action">

@@ -47,8 +47,32 @@ $user_type = $_SESSION['user_type'] == 'Super Admin';
                                 <option value="1234567890112343"
                                     <?= $nip == '1234567890112343' ? ' selected="selected"' : ''; ?>>Ria Nadiatama
                                 </option>
+                                <option value="1234567890112344"
+                                    <?= $nip == '1234567890112344' ? ' selected="selected"' : ''; ?>>Muhammad Zain
+                                </option>
+                                <option value="1963122419123452"
+                                    <?= $nip == '1963122419123452' ? ' selected="selected"' : ''; ?>>Dea Aryananda
+                                </option>
+                                <option value="1963122419890030"
+                                    <?= $nip == '1963122419890030' ? ' selected="selected"' : ''; ?>>Reynara Ghavin
+                                </option>
+                                <option value="1963122419899008"
+                                    <?= $nip == '1963122419899008' ? ' selected="selected"' : ''; ?>>Akaela Karina
+                                </option>
+                                <option value="1963122419899022"
+                                    <?= $nip == '1963122419899022' ? ' selected="selected"' : ''; ?>>Muhammad Husain
+                                </option>
+                                <option value="1963122419899065"
+                                    <?= $nip == '1963122419899065' ? ' selected="selected"' : ''; ?>>Ahmad Hafidzi
+                                </option>
                                 <option value="1963122419899999"
                                     <?= $nip == '1963122419899999' ? ' selected="selected"' : ''; ?>>Edward Bramhiers
+                                </option>
+                                <option value="1983122419899111"
+                                    <?= $nip == '1983122419899111' ? ' selected="selected"' : ''; ?>>Aveera Narudhana
+                                </option>
+                                <option value="1993122419899990"
+                                    <?= $nip == '1993122419899990' ? ' selected="selected"' : ''; ?>>Arisha Hanifa
                                 </option>
                             </select>
                         </div>
