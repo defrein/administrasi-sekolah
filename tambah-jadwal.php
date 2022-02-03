@@ -73,6 +73,13 @@ if (isset($_POST["submit"])) {
                     <span id="waktuHelpBlock" class="form-text text-muted">format: (jj:mm:dd)</span>
                 </div>
             </div>
+            <!-- <div class="form-group row">
+                <label for="nip" class="col-4 col-form-label">NIP Mengajar</label>
+                <div class="col-8">
+                    <input id="nip" name="nip" placeholder="masukkan nip" type="text" class="form-control"
+                        required="required">
+                </div>
+            </div> -->
             <div class="form-group row">
                 <label for="kd_mapel" class="col-4 col-form-label">Mata Pelajaran</label>
                 <div class="col-8">

@@ -116,6 +116,13 @@ if (isset($_POST["submit"])) {
                     </select>
                 </div>
             </div>
+            <!-- <div class="form-group row">
+                <label for="nip" class="col-4 col-form-label">NIP Pengajar</label>
+                <div class="col-8">
+                    <input id="nip" name="nip" placeholder="masukkan nip" type="text" class="form-control"
+                        required="required">
+                </div>
+            </div> -->
             <div class="form-group row">
                 <label for="nip" class="col-4 col-form-label">Pengajar</label>
                 <div class="col-8">

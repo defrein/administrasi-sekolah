@@ -45,26 +45,26 @@ $user_type = $_SESSION['user_type'] == 'Super Admin';
             <div class="pilihkelas hide-on-print" style="width: 60%; float:right;">
                 <form action="" method="post">
                     <div class="form-group row">
-                        <label for="kd_kelas" class="col-4 col-form-label">Pilih Kode Kelas</label>
-                        <div class="col-2">
+                        <label for="kd_kelas" class="col-3 col-form-label">Pilih Kelas</label>
+                        <div class="col-3">
                             <select id="kd_kelas" name="kd_kelas" class="custom-select">
-                                <option value="B100" <?= $kd_kelas == 'B100' ? ' selected="selected"' : ''; ?>>B100
+                                <option value="B100" <?= $kd_kelas == 'B100' ? ' selected="selected"' : ''; ?>>10 Bahasa
                                 </option>
-                                <option value="B110" <?= $kd_kelas == 'B110' ? ' selected="selected"' : ''; ?>>B110
+                                <option value="B110" <?= $kd_kelas == 'B110' ? ' selected="selected"' : ''; ?>>11 Bahasa
                                 </option>
-                                <option value="B120" <?= $kd_kelas == 'B120' ? ' selected="selected"' : ''; ?>>B120
+                                <option value="B120" <?= $kd_kelas == 'B120' ? ' selected="selected"' : ''; ?>>12 Bahasa
                                 </option>
-                                <option value="M100" <?= $kd_kelas == 'M100' ? ' selected="selected"' : ''; ?>>M100
+                                <option value="M100" <?= $kd_kelas == 'M100' ? ' selected="selected"' : ''; ?>>10 MIPA
                                 </option>
-                                <option value="M110" <?= $kd_kelas == 'M110' ? ' selected="selected"' : ''; ?>>M110
+                                <option value="M110" <?= $kd_kelas == 'M110' ? ' selected="selected"' : ''; ?>>11 MIPA
                                 </option>
-                                <option value="M120" <?= $kd_kelas == 'M120' ? ' selected="selected"' : ''; ?>>M120
+                                <option value="M120" <?= $kd_kelas == 'M120' ? ' selected="selected"' : ''; ?>>12 MIPA
                                 </option>
-                                <option value="S100" <?= $kd_kelas == 'S100' ? ' selected="selected"' : ''; ?>>S100
+                                <option value="S100" <?= $kd_kelas == 'S100' ? ' selected="selected"' : ''; ?>>10 Sosial
                                 </option>
-                                <option value="S110" <?= $kd_kelas == 'S110' ? ' selected="selected"' : ''; ?>>S110
+                                <option value="S110" <?= $kd_kelas == 'S110' ? ' selected="selected"' : ''; ?>>11 Sosial
                                 </option>
-                                <option value="S120" <?= $kd_kelas == 'S120' ? ' selected="selected"' : ''; ?>>S120
+                                <option value="S120" <?= $kd_kelas == 'S120' ? ' selected="selected"' : ''; ?>>12 Sosial
                                 </option>
                             </select>
                         </div>
